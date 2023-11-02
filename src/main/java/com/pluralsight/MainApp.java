@@ -8,7 +8,7 @@ public class MainApp {
 
         Deck deck = new Deck();
         deck.shuffle();
-// Ask for Player 1's name
+        // Ask for Player 1's name
         System.out.print("Enter Player 1's name: ");
         String player1Name = scanner.nextLine();
 
@@ -19,7 +19,7 @@ public class MainApp {
         Hand player1Hand = new Hand(player1Name);
         Hand player2Hand = new Hand(player2Name);
 
-        // Deal 5 cards to each player
+        // Deal 2 cards to each player
         for (int i = 0; i < 2; i++) {
             // Get a card from the deck for player 1
             Card card1 = deck.deal();
@@ -50,6 +50,8 @@ public class MainApp {
         } else {
             System.out.println("It's a tie!");
         }
+
+        scanner.close();
     }
 }
 
